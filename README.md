@@ -8,7 +8,7 @@ Na pasta raíz tem um arquivo: "Fluxo de Teste Formulário (BDD).txt" onde faço
 Instalação Cypress:
 npm install cypress
 
-Após isso acessar caminho da pasta e executar o seguinte comando:
+Após isso, acessar caminho da pasta e executar o seguinte comando:
 ./node_modules/.bin/cypress open
 
 Qualquer dúvida estou a disposição.
