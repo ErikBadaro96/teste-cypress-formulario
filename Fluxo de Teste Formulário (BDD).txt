@@ -1,0 +1,116 @@
+Story: Usuário tenta cadastrar formulário em branco.
+
+Scenario: Usuário não preenche dados do formulário.
+Dado que existe um formulário
+Quando não preencho nenhum campo do formulário
+E clico no botão de cadastrar 
+Então o cadastro não é efetuado e usuário recebe mensagem  “Nome é obrigatório”
+
+
+Story: Usuário tenta cadastrar formulário com campo Nome preenchido.
+
+Scenario: Usuário preenche seu nome no formulário de cadastro.
+Dado que existe um formulário
+Quando eu preencho com a informação <NOME>
+E clica no botão de cadastrar
+Então recebo a mensagem  “Sobrenome é obrigatório”
+
+Story: Usuário tenta cadastrar formulário com campo Nome e Sobrenome preenchidos.
+
+Scenario: Usuário preenche seu nome e sobrenome no formulário de cadastro.
+Dado que existe um formulário
+Quando eu preencho com as informações <NOME> e <SOBRENOME>
+E clico no botão de cadastrar
+Então recebo a mensagem  “Sexo é obrigatório”
+
+Story: Usuário tenta cadastrar formulário com campo Nome, Sobrenome e Sexo preenchidos.
+
+Scenario: Usuário preenche seu nome, sobrenome e seleciona o sexo no formulário de cadastro.
+Dado que existe um formulário
+Quando eu preencho com as informações <NOME>, <SOBRENOME> e <SEXO>
+E clico no botão de cadastrar
+Então recebo a mensagem  “Cadastrado!”
+
+Story: Usuário tenta cadastrar formulário com todos os campos preenchidos.
+
+Scenario: Usuário preenche formulário com todos os dados cadastrados
+Dado que existe um formulário
+Quando eu preencho com as informações <NOME>, <SOBRENOME>, <SEXO>, <COMIDA FAVORITA>, <ESCOLARIDADE>, <PRATICA ESPORTES?>, <SUGESTÕES>
+E seleciono a opção <Checkbox> 
+E seleciono a opção <Radio>
+E clico no botão de cadastrar
+Então deve finalizar o cadastro e recebo a mensagem  “Cadastrado!”
+
+Story: Usuário clicando no primeiro botão do rodapé
+
+Scenario: Usuário clica no botão do rodapé da página.
+Dado que existe botões no rodapé da página
+E clico no primeiro botão escrito “Alert”
+E recebo a mensagem: “Alert Simples”
+E clico na opção: “OK”
+Então pop-up some.
+
+Story: Usuário clicando no segundo botão do rodapé
+
+Scenario: Usuário clica no botão do rodapé da página
+Dado que existe botões no rodapé da página
+E clico no segundo botão escrito “Confirm”
+E recebo mensagem: “Confirm Simples”
+E clico na opção: “OK”
+Então recebo a mensagem: “Confirmado”
+
+Story: Usuário clicando no segundo botão do rodapé
+
+Scenario: Usuário clica no botão do rodapé da página
+Dado que existe botões no rodapé da página
+E clico no segundo botão escrito “Confirm”
+E recebo mensagem: “Confirm Simples”
+E clico na opção: “Cancelar”
+Então recebo a mensagem: “Negado”
+
+Story: Usuário clicando no terceiro botão do rodapé
+
+Scenario: Usuário clica no botão do rodapé da página
+Dado que existe botões no rodapé da página
+E clico no terceiro botão escrito “Prompt”
+E aparece um campo solicitando para informar um número
+E então digito um valor
+E clico na opção: “OK”
+E recebo a mensagem se o que foi preenchido é o correto
+E clico em: “OK”
+Então recebo a mensagem: ‘:D’
+
+Story: Usuário clicando no terceiro botão do rodapé
+
+Scenario: Usuário clica no botão do rodapé da página
+Dado que existe botões no rodapé da página
+E clico no terceiro botão escrito “Prompt”
+E aparece um campo solicitando para informar um número
+E então digito um valor
+E clico na opção: “OK”
+E recebo a mensagem se o que foi preenchido é o correto
+E clico em: “Cancelar”
+Então recebo a mensagem: ‘:(‘
+
+Story: Usuário clicando no terceiro botão do rodapé
+
+Scenario: Usuário clica no botão do rodapé da página
+Dado que existe botões no rodapé da página
+E clico no terceiro botão escrito “Prompt”
+E aparece um campo solicitando para informar um número
+E clico na opção: “Cancelar”
+E recebo a mensagem: “Era null?”
+E clico em: “OK”
+Então recebo a mensagem: ‘:D’
+
+Story: Usuário clicando no terceiro botão do rodapé
+
+Scenario: Usuário clica no botão do rodapé da página
+Dado que existe botões no rodapé da página
+E clico no terceiro botão escrito “Prompt”
+E aparece um campo solicitando para informar um número
+E clico na opção: “Cancelar”
+E recebo a mensagem: “Era null?”
+E clico em: “Cancelar”
+Então recebo a mensagem: ‘:(‘
+
